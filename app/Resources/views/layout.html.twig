@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} :: {% block page_title %}{% endblock %}{% endblock %}
+
+{% block custom_stylesheets %}
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link href="{{ asset('plugins/bootstrap3/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('plugins/animate/animate.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/style.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/style-responsive.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/theme/default.css') }}" id="theme" rel="stylesheet" />
+    <!-- ================== END BASE CSS STYLE ================== -->
+
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="{{ asset('plugins/pace/pace.min.js') }}"></script>
+    <!-- ================== END BASE JS ================== -->
+{% endblock %}
+
+{% block custom_scripts %}
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="{{ asset('plugins/jquery/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ asset('plugins/bootstrap3/js/bootstrap.min.js') }}"></script>
+    <!--[if lt IE 9]>
+    <script src="{{ asset('crossbrowserjs/html5shiv.js') }}"></script>
+    <script src="{{ asset('crossbrowserjs/respond.min.js') }}"></script>
+    <script src="{{ asset('crossbrowserjs/excanvas.min.js') }}"></script>
+    <![endif]-->
+    <script src="{{ asset('plugins/js-cookie/js.cookie.js') }}"></script>
+    <script src="{{ asset('js/apps.min.js') }}"></script>
+    <!-- ================== END BASE JS ================== -->
+
+    <script>
+        $(document).ready(function() {
+            App.init();
+        });
+    </script>
+{% endblock %}
+
+{% block page_container %}
+    <!-- begin #page-loader -->
+    <div id="page-loader" class="fade show"><span class="spinner"></span></div>
+    <!-- end #page-loader -->
+    <!-- begin #page-container -->
+    <div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+        <!-- begin #header -->
+        {{ include('default/header.html.twig') }}
+        <!-- end #header -->
+
+        <!-- begin #page-title -->
+        <div id="page-title" class="page-title has-bg">
+            <div class="bg-cover bottom"><img src="{{ asset('img/cover/cover.jpg') }}" alt="" /></div>
+            <div class="container">
+                {% block header_title %}
+                {% endblock %}
+            </div>
+        </div>
+        <!-- end #page-title -->
+
+        <div id="content" class="content {% block content_div_classes %}{% endblock %}">
+            <!-- begin container -->
+            <div class="container">
+                <!-- begin row -->
+                <div class="row row-space-30">
+                    {% block content %}
+                    {% endblock %}
+
+                    {% block sidebar %}
+                    {% endblock %}
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+    </div>
+    <!-- end #page-container -->
+{% endblock %}
+
+{% block footer %}
+    {{ include('base_footer.html.twig') }}
+{% endblock %}

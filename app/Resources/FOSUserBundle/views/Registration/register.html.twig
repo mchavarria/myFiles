@@ -1,0 +1,18 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}{{ parent() }} :: {{ 'Registration'|trans }}{% endblock %}
+
+{% block header_title %}
+        <h1>{{ 'register.to.my.files'|trans }}</h1>
+        <p>{{ 'you.can.start.saving.your.files'|trans }}</p>
+{% endblock %}
+
+{% block content %}
+        <div class="col-md-3"></div>
+        <!-- begin col-6 -->
+        <div class="col-md-6">
+        {% include 'default/Registration/register_content.html.twig' %}
+        </div>
+        <!-- end col-6 -->
+        <div class="col-md-3"></div>
+{% endblock %}

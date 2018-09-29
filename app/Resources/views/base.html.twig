@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <title>{% block title %}{{ 'my.file'|trans }}{% endblock %}</title>
+
+    {% include 'base_head.html.twig' %}
+
+    {% block custom_stylesheets %}
+    {% endblock %}
+</head>
+
+<body {% block body_attributes %}{% endblock %}>
+
+    {% block page_container %}
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock %}
+
+    {% block custom_scripts %}
+    {% endblock %}
+</body>
+</html>

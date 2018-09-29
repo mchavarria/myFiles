@@ -1,0 +1,18 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}{{ parent() }}{{ 'new.user'|trans }}{% endblock %}
+
+{% block header_title %}
+    <h1>{{ 'create.a.new.user'|trans }}</h1>
+    {#<p>{{ 'start.saving.your.files'|trans }}</p>#}
+{% endblock %}
+
+{% block content %}
+    <div class="col-md-3"></div>
+    <!-- begin col-9 -->
+    <div class="col-md-9">
+        {{ include('@App/User/form.html.twig') }}
+    </div>
+    <!-- end col-9 -->
+    <div class="col-md-3"></div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+<div class="right-content">
+    <!-- begin register-header -->
+    <h1 class="register-header">
+        Sign Up
+        <small>Create your Easy Block Chain Account.</small>
+    </h1>
+    <!-- end register-header -->
+    <!-- begin register-content -->
+    <div class="register-content">
+        {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'margin-bottom-0'}}) }}
+
+        {{ form_row(form.firstName) }}
+        {{ form_row(form.lastName) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.username) }}
+        {{ form_row(form.plainPassword.first) }}
+        {{ form_row(form.plainPassword.second) }}
+
+        <div class="form-group m-b-15">
+            <input type="checkbox" id="agreement_checkbox" value="">
+            <label for="agreement_checkbox">
+                By clicking Sign Up, you agree to our <a href="javascript:;">Terms</a> and that you have read our <a href="javascript:;">Data Policy</a>, including our <a href="javascript:;">Cookie Use</a>.
+            </label>
+        </div>
+
+        <div class="register-buttons">
+            <button type="submit" class="btn btn-primary btn-block btn-lg">{{ 'sign.up'|trans }}</button>
+        </div>
+        <div class="m-t-20 m-b-40 p-b-40 text-inverse">
+            Already a member? Click <a href="{{ path('fos_user_security_login') }}">here</a> to login.
+        </div>
+        {{ form_end(form) }}
+    </div>
+    <!-- end register-content -->
+</div>
