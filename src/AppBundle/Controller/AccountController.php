@@ -25,4 +25,5 @@ class AccountController extends Controller
             'files' => []
         ];
     }
+    
 }
