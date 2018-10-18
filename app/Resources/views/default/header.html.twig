@@ -10,22 +10,21 @@
             </button>
             <a href="{{ path('homepage') }}" class="navbar-brand">
                 <span class="brand-logo"></span>
-                <span class="brand-text">{{ 'my.files'|trans|upper }}</span>
+                <span class="brand-text">{{ 'brand.my.files'|trans|upper }}</span>
             </a>
         </div>
         <!-- end navbar-header -->
         <!-- begin navbar-collapse -->
         <div class="collapse navbar-collapse" id="header-navbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ path('homepage') }}">{{ 'home'|trans }}</a></li>
-                <li><a href="#">{{ 'about'|trans }}</a></li>
-                <li><a href="#">{{ 'contact.us'|trans }}</a></li>
+                <li><a href="{{ path('homepage') }}">{{ 'header.home'|trans }}</a></li>
+                <li><a href="#">{{ 'header.contact.us'|trans }}</a></li>
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                    <li><a href="#">{{ 'my.files'|trans }}</a></li>
-                    <li><a href="{{ path('app_user_edit', { id: app.user.id }) }}">{{ 'my.profile'|trans }}</a></li>
-                    <li><a href="{{ path('fos_user_security_logout') }}">{{ 'logout'|trans }}</a></li>
+                    <li><a href="{{ path('app_document_index') }}">{{ 'header.my.files'|trans }}</a></li>
+                    <li><a href="{{ path('app_user_edit', { id: app.user.id }) }}">{{ 'header.my.profile'|trans }}</a></li>
+                    <li><a href="{{ path('fos_user_security_logout') }}">{{ 'header.logout'|trans }}</a></li>
                 {% else %}
-                    <li><a href="{{ path('fos_user_security_login') }}">{{ 'login'|trans }}</a></li>
+                    <li><a href="{{ path('fos_user_security_login') }}">{{ 'header.login'|trans }}</a></li>
                 {% endif %}
             </ul>
         </div>

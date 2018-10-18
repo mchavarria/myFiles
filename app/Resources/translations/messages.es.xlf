@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="es" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="brand.my.files.title">
+                <source>brand.my.files.title</source>
+                <target>Mis Docs</target>
+            </trans-unit>
+            <trans-unit id="brand.my.files">
+                <source>brand.my.files</source>
+                <target>MIS DOCS</target>
+            </trans-unit>
+            <trans-unit id="header.home">
+                <source>header.home</source>
+                <target>INICIO</target>
+            </trans-unit>
+            <trans-unit id="header.contact.us">
+                <source>header.contact.us</source>
+                <target>CONTACTO</target>
+            </trans-unit>
+            <trans-unit id="header.my.files">
+                <source>header.my.files</source>
+                <target>MIS DOCS</target>
+            </trans-unit>
+            <trans-unit id="header.my.profile">
+                <source>header.my.profile</source>
+                <target>MI PERFIL</target>
+            </trans-unit>
+            <trans-unit id="header.logout">
+                <source>header.logout</source>
+                <target>SALIR</target>
+            </trans-unit>
+            <trans-unit id="header.login">
+                <source>header.logout</source>
+                <target>INGRESAR</target>
+            </trans-unit>
+            <trans-unit id="ac.title">
+                <source>ac.title</source>
+                <target>Mi cuenta</target>
+            </trans-unit>
+            <trans-unit id="ac.header.welcome.back">
+                <source>ac.header.welcome.back</source>
+                <target>BIENVENIDO OTRA VEZ</target>
+            </trans-unit>
+            <trans-unit id="ac.header.keep.saving">
+                <source>ac.header.keep.saving</source>
+                <target>asegura tus documentos</target>
+            </trans-unit>
+            <trans-unit id="doc.form.title">
+                <source>doc.form.title</source>
+                <target>Nuevo Documento</target>
+            </trans-unit>
+            <trans-unit id="form.save">
+                <source>form.save</source>
+                <target>GUARDAR</target>
+            </trans-unit>
+            <trans-unit id="form.cancel">
+                <source>form.cancel</source>
+                <target>CANCELAR</target>
+            </trans-unit>
+            <trans-unit id="doc.new.title">
+                <source>doc.new.title</source>
+                <target>Nuevo Documento</target>
+            </trans-unit>
+            <trans-unit id="doc.header.new.subtitle">
+                <source>doc.header.new.subtitle</source>
+                <target>Completa el formulario y guarda tu Documento</target>
+            </trans-unit>
+            <trans-unit id="doc.header.new.title">
+                <source>doc.header.new.title</source>
+                <target>Nuevo Documento</target>
+            </trans-unit>
+            <trans-unit id="mf.title">
+                <source>mf.title</source>
+                <target>Administrar</target>
+            </trans-unit>
+            <trans-unit id="mf.header.title">
+                <source>mf.header.title</source>
+                <target>ADMINISTRAR DOCUMENTOS</target>
+            </trans-unit>
+            <trans-unit id="mf.header.subtitle">
+                <source>mf.header.subtitle</source>
+                <target>Aquí puedes administrar tus documentos</target>
+            </trans-unit>
+            <trans-unit id="mf.item.no.description">
+                <source>mf.item.no.description</source>
+                <target>Descripción no disponible</target>
+            </trans-unit>
+            <trans-unit id="mf.item.read.more">
+                <source>mf.item.read.more</source>
+                <target>Ver más</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

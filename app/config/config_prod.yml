@@ -11,7 +11,7 @@ imports:
 doctrine:
     dbal:
         url: "%env(CLEARDB_DATABASE_URL)%"
-        
+
 monolog:
     handlers:
         main:
