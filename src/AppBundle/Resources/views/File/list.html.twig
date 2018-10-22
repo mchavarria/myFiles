@@ -1,0 +1,34 @@
+<!-- begin post-list -->
+<div class="post-list post-grid post-grid-2">
+    {% for file in files %}
+        <div class="post-li">
+        <!-- begin post-content -->
+        <div class="post-content">
+            <!-- begin blockquote -->
+            <blockquote>
+                {#TODO crear thumbnail para tipo de archivo.#}
+                "What is design? It's where you stand with a foot in two worlds - the world of technology and the world of people and human purposes - and you try to bring the two together."
+            </blockquote>
+            <!-- end blockquote -->
+            <!-- begin post-info -->
+            <div class="post-info">
+                <h4 class="post-title">
+                    <a href="#">{{ file.name }}</a>
+                </h4>
+                <div class="post-by">
+                    <a href="{% path file.media, 'reference' %}" target="_blank">Download</a> <span class="divider">|</span> {{ file.createdDate|date('Y-m-d') }}
+                </div>
+                <div class="post-desc">
+                    {{ file.description|length > 30 ? file.description|slice(0, 20) ~ '...' : file.description }}
+                </div>
+                <div class="read-btn-container">
+                    <a href="{{ path('app_file_manager_detail', { id: file.id }) }}" class="read-btn">{{ 'mf.item.read.more'|trans }}<i class="fa fa-angle-double-right"></i></a>
+                </div>
+            </div>
+            <!-- end post-info -->
+        </div>
+        <!-- end post-content -->
+    </div>
+    {% endfor %}
+</div>
+<!-- end post-list -->

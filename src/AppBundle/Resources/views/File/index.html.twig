@@ -1,0 +1,38 @@
+{% extends 'layout.html.twig' %}
+
+{% block page_title %}{{ 'header.home'|trans }}{% endblock %}
+
+{% block header_title %}
+    <h1>{{ 'mf.header.title'|trans }}</h1>
+    <p>{{ 'mf.header.subtitle'|trans }}</p>
+{% endblock %}
+
+{% block content %}
+    <!-- begin col-9 -->
+    <div class="col-md-9">
+
+        {#TODO agregar los estilos de la página#}
+        {% include "@App/File/list.html.twig" %}
+
+        {#<div class="section-container">#}
+            {#<!-- begin pagination -->#}
+            {#<div class="pagination-container text-center">#}
+                {#<ul class="pagination m-t-0 m-b-0">#}
+                    {#<li class="disabled"><a href="javascript:;">Prev</a></li>#}
+                    {#<li class="active"><a href="javascript:;">1</a></li>#}
+                    {#<li><a href="javascript:;">2</a></li>#}
+                    {#<li><a href="javascript:;">3</a></li>#}
+                    {#<li><span class="text">...</span></li>#}
+                    {#<li><a href="javascript:;">1797</a></li>#}
+                    {#<li><a href="javascript:;">Next</a></li>#}
+                {#</ul>#}
+            {#</div>#}
+            {#<!-- end pagination -->#}
+        {#</div>#}
+    </div>
+    <!-- end col-9 -->
+{% endblock %}
+
+{% block sidebar %}
+    {{ include('base_sidebar.html.twig') }}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+<div class="panel-body">
+    {{ form_start(form, { 'action': path('app_file_manager_new') }) }}
+    <fieldset>
+        <legend class="m-b-15">{{ 'doc.form.title'|trans }}</legend>
+
+        {{ form_row(form.name) }}
+        {{ form_row(form.description) }}
+        {{ form_row(form.media) }}
+
+        <button type="submit" class="btn btn-sm btn-primary m-r-5">{{ 'form.save'|trans }}</button>
+        <a href="{{ path('app_file_manager_index')}}" class="btn btn-sm btn-default">{{ 'form.cancel'|trans }}</a>
+
+    </fieldset>
+    {{ form_end(form) }}
+</div>

@@ -1,0 +1,79 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}{{ parent() }}{{ 'doc.detail.title'|trans }}{% endblock %}
+
+{% block header_title %}
+    <h1>{{ 'doc.detail.header.title'|trans }}</h1>
+    <p>{{ 'doc.detail.header.subtitle'|trans }}</p>
+{% endblock %}
+
+{% block content %}
+    <div class="col-md-9">
+        <!-- begin post-detail -->
+        <div class="post-detail section-container">
+            <h4 class="post-title">
+                <a href="#">{{ file.name }}</a>
+            </h4>
+            <div class="post-by">
+                Posted By <a href="#">admin</a> <span class="divider">|</span> 10 June 2018 <span class="divider">|</span> <a href="#">Sports</a>, <a href="#">Mountain</a>, <a href="#">Bike</a> <span class="divider">|</span> 2 Comments
+            </div>
+            <!-- begin post-image -->
+            <div class="post-image">
+                <div class="post-image-cover" style="background-image: url(../assets/img/post/post-1.jpg)"></div>
+            </div>
+            <!-- end post-image -->
+            <!-- begin post-desc -->
+            <div class="post-desc">
+                <p>
+                    {{ file.description|raw }}
+                </p>
+            </div>
+            <!-- end post-desc -->
+        </div>
+        <!-- end post-detail -->
+        <!-- begin section-container -->
+        <div class="section-container">
+            <h4 class="section-title"><span>All Comments (3)</span></h4>
+            <!-- begin comment-list -->
+            <ul class="comment-list">
+                <li>
+                    <!-- begin comment-avatar -->
+                    <div class="comment-avatar">
+                        <img src="../assets/img/user/user-1.jpg" alt="" />
+                    </div>
+                    <!-- end comment-avatar -->
+                    <!-- begin comment-container -->
+                    <div class="comment-container">
+                        <div class="comment-author">
+                            Isador Ennio
+                            <span class="comment-date">
+										on <span class="underline">June 6, 2018</span> at <span class="underline">11:23 pm</span>
+										</span>
+                        </div>
+                        <div class="comment-content">
+                            Fusce urna massa, pellentesque eget interdum nec, lacinia nec velit.
+                        </div>
+                    </div>
+                    <!-- end comment-container -->
+                </li>
+            </ul>
+            <!-- end comment-list -->
+        </div>
+        <!-- end section-container -->
+        <!-- begin section-container -->
+        <div class="section-container">
+            <h4 class="section-title m-b-20"><span>Add a Comment</span></h4>
+            <div class="alert alert-warning f-s-12">
+                Suspendisse vulputate pulvinar nisl, quis rutrum risus pretium ut. Nulla at risus facilisis, consectetur erat nec,
+                posuere justo. Ut elementum, elit pellentesque eleifend semper, elit metus venenatis libero,
+                non fermentum mi est eu neque. Ut vel metus eget tortor viverra varius et quis eros.
+            </div>
+            <a href="#" class="btn btn-inverse btn-lg">Submit to Block Chain</a>
+        </div>
+        <!-- end section-container -->
+    </div>
+{% endblock %}
+
+{% block sidebar %}
+    {{ include('base_sidebar.html.twig') }}
+{% endblock %}

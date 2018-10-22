@@ -98,11 +98,11 @@ sonata_media:
     contexts:
         default:  # the default context is mandatory
             providers:
-                - sonata.media.provider.dailymotion
-                - sonata.media.provider.youtube
-                - sonata.media.provider.image
+#                - sonata.media.provider.dailymotion
+#                - sonata.media.provider.youtube
+#                - sonata.media.provider.image
                 - sonata.media.provider.file
-                - sonata.media.provider.vimeo
+#                - sonata.media.provider.vimeo
 
             formats:
                 small: { width: 100 , quality: 70}
@@ -117,6 +117,18 @@ sonata_media:
             #directory:  "%kernel.root_dir%/../public/uploads/media" #flex
             directory:  "%kernel.root_dir%/../web/uploads/media" #non-flex
             create:     false
+
+#    providers:
+#        file:
+#            service:    sonata.media.provider.file
+#            resizer:    false
+#            filesystem: sonata.media.filesystem.local
+##            cdn:        sonata.media.cdn.server
+#            generator:  sonata.media.generator.default
+#            thumbnail:  sonata.media.thumbnail.format
+#            allowed_extensions: ['pdf', 'txt', 'rtf', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pttx', 'odt', 'odg', 'odp', 'ods', 'odc', 'odf', 'odb', 'csv', 'xml']
+#            allowed_mime_types: ['application/pdf', 'application/x-pdf', 'application/rtf', 'text/html', 'text/rtf', 'text/plain']
+#
 
 sonata_core:
     form:

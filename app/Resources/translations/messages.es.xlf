@@ -31,7 +31,7 @@
                 <target>SALIR</target>
             </trans-unit>
             <trans-unit id="header.login">
-                <source>header.logout</source>
+                <source>header.login</source>
                 <target>INGRESAR</target>
             </trans-unit>
             <trans-unit id="ac.title">
@@ -89,6 +89,10 @@
             <trans-unit id="mf.item.read.more">
                 <source>mf.item.read.more</source>
                 <target>Ver más</target>
+            </trans-unit>
+            <trans-unit id="btn.new">
+                <source>btn.new</source>
+                <target>Nuevo Documento</target>
             </trans-unit>
         </body>
     </file>
