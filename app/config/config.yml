@@ -116,7 +116,7 @@ sonata_media:
         local:
             #directory:  "%kernel.root_dir%/../public/uploads/media" #flex
             directory:  "%kernel.root_dir%/../web/uploads/media" #non-flex
-            create:     false
+            create:     true
 
 #    providers:
 #        file:
