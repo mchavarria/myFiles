@@ -13,7 +13,7 @@
             <!-- begin post-info -->
             <div class="post-info">
                 <h4 class="post-title">
-                    <a href="#">{{ file.name }}</a>
+                    <a href="{{ path('app_file_manager_detail', { id: file.id }) }}">{{ file.name }}</a>
                 </h4>
                 <div class="post-by">
                     <a href="{% path file.media, 'reference' %}" target="_blank">Download</a> <span class="divider">|</span> {{ file.createdDate|date('Y-m-d') }}

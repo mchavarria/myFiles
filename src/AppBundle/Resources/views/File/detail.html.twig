@@ -12,46 +12,44 @@
         <!-- begin post-detail -->
         <div class="post-detail section-container">
             <h4 class="post-title">
-                <a href="#">{{ file.name }}</a>
+                {{ file.name }}
             </h4>
             <div class="post-by">
-                Posted By <a href="#">admin</a> <span class="divider">|</span> 10 June 2018 <span class="divider">|</span> <a href="#">Sports</a>, <a href="#">Mountain</a>, <a href="#">Bike</a> <span class="divider">|</span> 2 Comments
+                {{ 'doc.detail.header.created.at'|trans }} {{ file.createdDate|date('Y-m-d') }}
             </div>
-            <!-- begin post-image -->
-            <div class="post-image">
-                <div class="post-image-cover" style="background-image: url(../assets/img/post/post-1.jpg)"></div>
-            </div>
-            <!-- end post-image -->
+            {#<!-- begin post-image -->#}
+            {#<div class="post-image">#}
+                {#<div class="post-image-cover" style="background-image: url(../assets/img/post/post-1.jpg)"></div>#}
+            {#</div>#}
+            {#<!-- end post-image -->#}
             <!-- begin post-desc -->
             <div class="post-desc">
                 <p>
                     {{ file.description|raw }}
                 </p>
+                <br>
+                <a href="{% path file.media, 'reference' %}" target="_blank" class="btn btn-inverse btn-lg">{{ 'doc.detail.download'|trans }}</a>
             </div>
             <!-- end post-desc -->
         </div>
         <!-- end post-detail -->
+        {% if file.bcHash %}
         <!-- begin section-container -->
         <div class="section-container">
-            <h4 class="section-title"><span>All Comments (3)</span></h4>
+            <h4 class="section-title"><span>{{ 'doc.detail.in.bc.title'|trans }}</span></h4>
             <!-- begin comment-list -->
             <ul class="comment-list">
                 <li>
-                    <!-- begin comment-avatar -->
-                    <div class="comment-avatar">
-                        <img src="../assets/img/user/user-1.jpg" alt="" />
-                    </div>
-                    <!-- end comment-avatar -->
                     <!-- begin comment-container -->
                     <div class="comment-container">
                         <div class="comment-author">
-                            Isador Ennio
+                            {{ 'doc.detail.in.bc.date.title'|trans }}
                             <span class="comment-date">
-										on <span class="underline">June 6, 2018</span> at <span class="underline">11:23 pm</span>
-										</span>
+                                {{ 'doc.detail.in.bc.date.on'|trans }} {{ file.updatedDate|date('Y-m-d') }}
+                            </span>
                         </div>
                         <div class="comment-content">
-                            Fusce urna massa, pellentesque eget interdum nec, lacinia nec velit.
+                            {{ 'doc.detail.in.bc.check.on'|trans }}
                         </div>
                     </div>
                     <!-- end comment-container -->
@@ -60,17 +58,17 @@
             <!-- end comment-list -->
         </div>
         <!-- end section-container -->
+        {% else %}
         <!-- begin section-container -->
         <div class="section-container">
-            <h4 class="section-title m-b-20"><span>Add a Comment</span></h4>
+            <h4 class="section-title m-b-20"><span>{{ 'doc.detail.save.to.bc.title'|trans }}</span></h4>
             <div class="alert alert-warning f-s-12">
-                Suspendisse vulputate pulvinar nisl, quis rutrum risus pretium ut. Nulla at risus facilisis, consectetur erat nec,
-                posuere justo. Ut elementum, elit pellentesque eleifend semper, elit metus venenatis libero,
-                non fermentum mi est eu neque. Ut vel metus eget tortor viverra varius et quis eros.
+                {{ 'doc.detail.save.to.bc.description'|trans }}
             </div>
-            <a href="#" class="btn btn-inverse btn-lg">Submit to Block Chain</a>
+            <a href="{{ path('app_file_manager_save_on_bc', { id: file.id }) }}" class="btn btn-inverse btn-lg">{{ 'doc.detail.save.to.bc.btn'|trans }}</a>
         </div>
         <!-- end section-container -->
+        {% endif %}
     </div>
 {% endblock %}
 

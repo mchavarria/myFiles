@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\File;
 use AppBundle\Form\FileType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
@@ -51,12 +52,19 @@ class FileController extends Controller
         $form = $this->createForm(FileType::class, $file);
 
         $form->handleRequest($request);
+        /** @var UploadedFile $binaryContent */
+        $binaryContent = $file->getMedia()->getBinaryContent();
+        $path = $binaryContent->getPathname();
+        $hashValue = md5_file($path);
+        $file->setFileHash($hashValue);
 
         if ($form->isSubmitted() && $form->isValid()) {
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($file);
             $entityManager->flush();
+
+            //TODO dispatch event to save on BlockChain.
 
             $redirectUrl = $this->redirectToRoute('app_file_manager_index');
 
@@ -103,4 +111,37 @@ class FileController extends Controller
         return $parameters;
     }
 
+    /**
+     * @Route("/{id}/save-on-bc", name="app_file_manager_save_on_bc", requirements={"id" = "\d+"}, options={"expose" = true})
+     *
+     * @param Request $request HTTP request.
+     * @param int     $id      Identifier
+     *
+     * @return array|Response
+     */
+    public function saveOnBcAction(Request $request, $id)
+    {
+        $repository = $this->getDoctrine()->getRepository(File::class);
+        $file = $repository->find($id);
+
+        if (!$file->getFileHash()) {
+            /** @var UploadedFile $binaryContent */
+            $binaryContent = $file->getMedia()->getBinaryContent();
+            $path = $binaryContent->getPathname();
+            $hashValue = md5_file($path);
+            $file->setFileHash($hashValue);
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($file);
+            $entityManager->flush();
+        }
+
+        if (!$file->getBcHash()) {
+            //TODO dispatch event to save on BlockChain.
+        }
+
+        $url = $this->generateUrl('app_file_manager_detail', [ 'id' => $id ]);
+
+        return $this->redirect($url);
+    }
 }

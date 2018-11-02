@@ -56,6 +56,11 @@ class File
     private $bcHash;
 
     /**
+     * @ORM\Column(type="string", nullable=FALSE)
+     */
+    private $fileHash;
+
+    /**
      * File constructor.
      *
      * @param User $user
@@ -143,6 +148,22 @@ class File
     public function getBcHash()
     {
         return $this->bcHash;
+    }
+
+    /**
+     * @param string $hash
+     */
+    public function setFileHash($hash)
+    {
+        $this->fileHash = $hash;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFileHash()
+    {
+        return $this->fileHash;
     }
 
 }
