@@ -10,6 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Unirest;
 
 /**
  * Class FileController
@@ -17,6 +18,8 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class FileController extends Controller
 {
+    const EXAMPLE_URL = 'http://local.ezbkch.com/app_dev.php/app/api-management/v1/consume/1?hash=%s';
+
     /**
      * @Template("@App/File/index.html.twig")
      *
@@ -52,19 +55,34 @@ class FileController extends Controller
         $form = $this->createForm(FileType::class, $file);
 
         $form->handleRequest($request);
-        /** @var UploadedFile $binaryContent */
-        $binaryContent = $file->getMedia()->getBinaryContent();
-        $path = $binaryContent->getPathname();
-        $hashValue = md5_file($path);
-        $file->setFileHash($hashValue);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            /** @var UploadedFile $binaryContent */
+            $binaryContent = $file->getMedia()->getBinaryContent();
+            $path = $binaryContent->getPathname();
+            $hashValue = md5_file($path);
+            $file->setFileHash($hashValue);
+
+            //TODO dispatch event to save on BlockChain.
+            $url = self::EXAMPLE_URL;
+            $url = sprintf(
+                $url,
+                $file->getFileHash()
+            );
+
+            $resp = Unirest\Request::get($url);
+            $info = json_decode(json_encode($resp->body), true);
+
+            $hasError = !(is_array($info));
+            if (!$hasError) {
+                $txid = $info['txid'];
+                $file->setBcHash($txid);
+            }
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($file);
             $entityManager->flush();
-
-            //TODO dispatch event to save on BlockChain.
 
             $redirectUrl = $this->redirectToRoute('app_file_manager_index');
 
@@ -124,21 +142,27 @@ class FileController extends Controller
         $repository = $this->getDoctrine()->getRepository(File::class);
         $file = $repository->find($id);
 
-        if (!$file->getFileHash()) {
-            /** @var UploadedFile $binaryContent */
-            $binaryContent = $file->getMedia()->getBinaryContent();
-            $path = $binaryContent->getPathname();
-            $hashValue = md5_file($path);
-            $file->setFileHash($hashValue);
-
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($file);
-            $entityManager->flush();
-        }
-
         if (!$file->getBcHash()) {
             //TODO dispatch event to save on BlockChain.
+            $url = self::EXAMPLE_URL;
+            $url = sprintf(
+                $url,
+                $file->getFileHash()
+            );
+
+            $resp = Unirest\Request::get($url);
+            $info = json_decode(json_encode($resp->body), true);
+
+            $hasError = !(is_array($info));
+            if (!$hasError) {
+                $txid = $info['txId'];
+                $file->setBcHash($txid);
+            }
         }
+
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($file);
+        $entityManager->flush();
 
         $url = $this->generateUrl('app_file_manager_detail', [ 'id' => $id ]);
 
