@@ -9,7 +9,6 @@
         {{ form_row(form.lastName) }}
         {{ form_row(form.email) }}
         {{ form_row(form.username) }}
-        {{ form_row(form.type) }}
 
         <button type="submit" class="btn btn-sm btn-primary m-r-5">{{ user.id ? 'user.save'|trans : 'user.create'|trans }}</button>
         <a href="{{ is_granted('ROLE_ADMIN') ? path('app_user_index') : path('app_account_index')}}" class="btn btn-sm btn-default">{{ 'user.cancel'|trans }}</a>

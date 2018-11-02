@@ -42,13 +42,6 @@ class UserType extends AbstractType
                 'placeholder' => 'Username'
             ]
         ]);
-        $builder->add('type', ChoiceType::class, [
-            'choices' => [
-                'Admin' => UserTypes::ADMIN_USER,
-                'Free User' => UserTypes::FREE_USER,
-            ],
-            'placeholder' => '-- Choose an option --'
-        ]);
     }
 
     /**

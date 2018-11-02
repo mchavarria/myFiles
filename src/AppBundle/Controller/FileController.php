@@ -18,7 +18,7 @@ use Unirest;
  */
 class FileController extends Controller
 {
-    const EXAMPLE_URL = 'http://local.ezbkch.com/app_dev.php/app/api-management/v1/consume/1?hash=%s';
+    const EXAMPLE_URL = 'http://proyezbc.herokuapp.com/app/api-management/v1/consume/1?hash=%s';
 
     /**
      * @Template("@App/File/index.html.twig")
