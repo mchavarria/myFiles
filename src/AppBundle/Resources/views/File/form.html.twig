@@ -3,6 +3,16 @@
 <div class="panel-body">
     {{ form_start(form, { 'action': path('app_file_manager_new') }) }}
     <fieldset>
+        {% if form.vars.errors|length > 0 %}
+            <div class="alert alert-danger">
+                <strong>Please correct the following errors:</strong>
+                {{ form_errors(form) }}
+            </div>
+        {% elseif not form.vars.valid %}
+            <div class="alert alert-danger">
+                <strong>Please correct the following errors</strong>
+            </div>
+        {% endif %}
         <legend class="m-b-15">{{ 'doc.form.title'|trans }}</legend>
 
         {{ form_row(form.name) }}
