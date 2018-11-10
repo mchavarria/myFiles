@@ -270,8 +270,8 @@
                 <target>BlockChain ID</target>
             </trans-unit>
             <trans-unit id="doc.detail.in.bc.hash.check.on">
-                <source>doc.detail.in.bc.md5.hash.on</source>
-                <target>Validate BlockChain Hash %link_start%here%link_end%.</target>
+                <source>doc.detail.in.bc.hash.check.on</source>
+                <target>Validate BlockChain Transaction Hash %link_start%here%link_end%.</target>
             </trans-unit>
             <trans-unit id="doc.detail.save.to.bc.title">
                 <source>doc.detail.save.to.bc.title</source>
