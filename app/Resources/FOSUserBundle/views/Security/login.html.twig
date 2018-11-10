@@ -1,10 +1,10 @@
 {% extends "layout.html.twig" %}
 
-{% block title %}{{ parent() }} :: {{ 'Login'|trans }}{% endblock %}
+{% block title %}{{ parent() }}{{ 'login.title'|trans }}{% endblock %}
 
 {% block header_title %}
-    <h1>{{ 'login.to.my.files'|trans }}</h1>
-    <p>{{ 'start.saving.your.files'|trans }}</p>
+    <h1>{{ 'login.header.title'|trans }}</h1>
+    <p>{{ 'login.header.subtitle'|trans }}</p>
 {% endblock %}
 
 {% block content %}
@@ -19,34 +19,13 @@
                     <div class="post-image post-image-with-carousel">
                         <!-- begin carousel -->
                         <div id="carousel-post" class="carousel slide" data-ride="carousel">
-                            <!-- begin carousel-indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-post" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-post" data-slide-to="1"></li>
-                                <li data-target="#carousel-post" data-slide-to="2"></li>
-                            </ol>
-                            <!-- end carousel-indicators -->
                             <!-- begin carousel-inner -->
                             <div class="carousel-inner">
                                 <div class="item active">
                                     <a href="#"><img src="{{ asset('img/login/login-1.jpg') }}" alt="" /></a>
                                 </div>
-                                <div class="item">
-                                    <a href="#"><img src="{{ asset('img/login/login-2.jpg') }}" alt="" /></a>
-                                </div>
-                                <div class="item">
-                                    <a href="#"><img src="{{ asset('img/login/login-3.jpg') }}" alt="" /></a>
-                                </div>
                             </div>
                             <!-- end carousel-inner -->
-                            <!-- begin carousel-control -->
-                            <a class="left carousel-control" href="#carousel-post" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                            </a>
-                            <a class="right carousel-control" href="#carousel-post" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            </a>
-                            <!-- end carousel-control -->
                         </div>
                         <!-- end carousel -->
                     </div>
@@ -54,10 +33,10 @@
                     <!-- begin post-info -->
                     <div class="post-info">
                         <h4 class="post-title">
-                            {{ 'login.start.using.my.file'|trans }}
+                            {{ 'login.post.title'|trans }}
                         </h4>
                         <div class="post-desc">
-                            {{ 'benefits.having.account'|trans }}
+                            {{ 'login.post.description'|trans({'%link_start%' : '<a href="'~path('fos_user_registration_register')~'" class="text-success">', '%link_end%' : '</a>'})|raw }}
                         </div>
                     </div>
                     <!-- end post-info -->

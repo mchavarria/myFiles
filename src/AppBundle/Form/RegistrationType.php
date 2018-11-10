@@ -15,49 +15,34 @@ class RegistrationType extends AbstractType
     {
         //TODO add validations
         $builder->add('firstName', TextType::class, [
-            'attr' => [
-                'placeholder' => 'First Name'
-            ]
+            'label' => 'user.form.first.name',
         ]);
         $builder->add('lastName', TextType::class, [
-            'attr' => [
-                'placeholder' => 'Last Name'
-            ]
+            'label' => 'user.form.last.name',
         ]);
         $builder->remove('email');
         $builder->add('email', EmailType::class, [
-            'attr' => [
-                'placeholder' => 'Email'
-            ]
+            'label' => 'user.form.email',
         ]);
         $builder->remove('username');
         $builder->add('username', TextType::class, [
-            'attr' => [
-                'placeholder' => 'Username'
-            ]
+            'label' => 'user.form.username',
         ]);
         $builder->remove('plainPassword');
         $builder->add('plainPassword', RepeatedType::class, [
             'type' => PasswordType::class,
             'options' => [
-                'translation_domain' => 'FOSUserBundle',
                 'attr' => [
                     'autocomplete' => 'new-password',
                 ],
             ],
             'first_options' => [
-                'label' => 'Password',
-                'attr' => [
-                    'placeholder' => 'Password'
-                ]
+                'label' => 'user.form.password',
             ],
             'second_options' => [
-                'label' => 'Password Confirmation',
-                'attr' => [
-                    'placeholder' => 'Confirm Password'
-                ]
+                'label' => 'user.form.confirm.password',
             ],
-            'invalid_message' => 'fos_user.password.mismatch',
+            'invalid_message' => 'user.form.password.mismatch',
         ]);
     }
 

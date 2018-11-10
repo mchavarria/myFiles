@@ -34,6 +34,73 @@
                 <source>header.login</source>
                 <target>LOGIN</target>
             </trans-unit>
+            <trans-unit id="login.title">
+                <source>login.title</source>
+                <target>Login</target>
+            </trans-unit>
+            <trans-unit id="login.header.title">
+                <source>login.header.title</source>
+                <target>Login to My Files!</target>
+            </trans-unit>
+            <trans-unit id="login.header.subtitle">
+                <source>login.header.subtitle</source>
+                <target>Manage your files!</target>
+            </trans-unit>
+            <trans-unit id="login.post.title">
+                <source>login.post.title</source>
+                <target>Don't have an account yet?</target>
+            </trans-unit>
+            <trans-unit id="login.post.description">
+                <source>login.post.description</source>
+                <target>Click %link_start%here%link_end% to register.</target>
+            </trans-unit>
+            <trans-unit id="login.form.title">
+                <source>login.form.title</source>
+                <target>Login</target>
+            </trans-unit>
+            <trans-unit id="login.form.username">
+                <source>login.form.username</source>
+                <target>Email or Username</target>
+            </trans-unit>
+            <trans-unit id="login.form.password">
+                <source>login.form.password</source>
+                <target>Password</target>
+            </trans-unit>
+            <trans-unit id="login.btn">
+                <source>login.btn</source>
+                <target>LOGIN</target>
+            </trans-unit>
+            <trans-unit id="login.not.member">
+                <source>login.not.member</source>
+                <target>Not a member yet? Click %link_start%here%link_end% to register.</target>
+            </trans-unit>
+            <trans-unit id="idx.title">
+                <source>idx.title</source>
+                <target>Home</target>
+            </trans-unit>
+            <trans-unit id="idx.header.title">
+                <source>idx.header.title</source>
+                <target>Welcome to My Files!</target>
+            </trans-unit>
+            <trans-unit id="idx.header.subtitle">
+                <source>idx.header.subtitle</source>
+                <target>Start by creating a free account!</target>
+            </trans-unit>
+            <trans-unit id="idx.post.title">
+                <source>idx.post.title</source>
+                <target>How My Files Works?</target>
+            </trans-unit>
+            <trans-unit id="idx.post.description">
+                <source>idx.post.description</source>
+                <target>My Files is an app that allows you to certificate your files property!. It's so simple, just upload your files and that's all!
+                The BlockChain technology will do the rest.
+                In this short video you'll see what is BlockChain and How it allows us to keep your files integrity.
+                </target>
+            </trans-unit>
+            <trans-unit id="btn.register">
+                <source>btn.register</source>
+                <target>Register</target>
+            </trans-unit>
             <trans-unit id="ac.title">
                 <source>ac.title</source>
                 <target>ACCOUNT</target>
@@ -76,7 +143,7 @@
             </trans-unit>
             <trans-unit id="mf.header.title">
                 <source>mf.header.title</source>
-                <target>FILES MANAGEMENT</target>
+                <target>Files Management</target>
             </trans-unit>
             <trans-unit id="mf.header.subtitle">
                 <source>mf.header.subtitle</source>
@@ -93,6 +160,138 @@
             <trans-unit id="btn.new">
                 <source>btn.new</source>
                 <target>New File</target>
+            </trans-unit>
+            <trans-unit id="user.edit.title">
+                <source>user.edit.title</source>
+                <target>My profile</target>
+            </trans-unit>
+            <trans-unit id="user.edit.header.title">
+                <source>user.edit.header.title</source>
+                <target>My profile</target>
+            </trans-unit>
+            <trans-unit id="user.edit.header.subtitle">
+                <source>user.edit.header.subtitle</source>
+                <target>Here you can manage your information</target>
+            </trans-unit>
+            <trans-unit id="user.form.title">
+                <source>user.form.title</source>
+                <target>Current Information</target>
+            </trans-unit>
+            <trans-unit id="user.form.first.name">
+                <source>user.form.first.name</source>
+                <target>First Name</target>
+            </trans-unit>
+            <trans-unit id="user.form.last.name">
+                <source>user.form.last.name</source>
+                <target>Last Name</target>
+            </trans-unit>
+            <trans-unit id="user.form.email">
+                <source>user.form.email</source>
+                <target>Email</target>
+            </trans-unit>
+            <trans-unit id="user.form.username">
+                <source>user.form.username</source>
+                <target>User</target>
+            </trans-unit>
+            <trans-unit id="user.form.password">
+                <source>user.form.password</source>
+                <target>Password</target>
+            </trans-unit>
+            <trans-unit id="user.form.confirm.password">
+                <source>user.form.confirm.password</source>
+                <target>Confirm password</target>
+            </trans-unit>
+            <trans-unit id="user.form.save">
+                <source>user.form.save</source>
+                <target>SAVE</target>
+            </trans-unit>
+            <trans-unit id="user.form.cancel">
+                <source>user.form.cancel</source>
+                <target>CANCEL</target>
+            </trans-unit>
+            <trans-unit id="register.title">
+                <source>register.title</source>
+                <target>Registration</target>
+            </trans-unit>
+            <trans-unit id="register.header.title">
+                <source>register.header.title</source>
+                <target>Register to My Files</target>
+            </trans-unit>
+            <trans-unit id="register.header.subtitle">
+                <source>register.header.subtitle</source>
+                <target>Start having the BlockChain benefits</target>
+            </trans-unit>
+            <trans-unit id="register.form.title">
+                <source>register.form.title</source>
+                <target>Fill out the form</target>
+            </trans-unit>
+            <trans-unit id="register.sign.up">
+                <source>register.sign.up</source>
+                <target>REGISTER</target>
+            </trans-unit>
+            <trans-unit id="register.is.member">
+                <source>register.is.member</source>
+                <target>Already a member? Click %link_start%here%link_end% to login.</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.title">
+                <source>doc.detail.title</source>
+                <target>File Details</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.header.title">
+                <source>doc.detail.header.title</source>
+                <target>File Details</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.header.subtitle">
+                <source>doc.detail.header.subtitle</source>
+                <target>See your file information</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.download">
+                <source>doc.detail.download</source>
+                <target>Download</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.header.created.at">
+                <source>doc.detail.header.created.at</source>
+                <target>Created at</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.in.bc.date.title">
+                <source>doc.detail.in.bc.date.title</source>
+                <target>The file was persisted on BlockChain at</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.in.bc.your.md5.hash">
+                <source>doc.detail.in.bc.your.md5.hash</source>
+                <target>File MD5 has</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.in.bc.md5.check.on">
+                <source>doc.detail.in.bc.md5.check.on</source>
+                <target>Validate MD5 hash %link_start%here%link_end%.</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.in.bc.your.bc.id">
+                <source>doc.detail.in.bc.your.bc.id</source>
+                <target>BlockChain ID</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.in.bc.hash.check.on">
+                <source>doc.detail.in.bc.md5.hash.on</source>
+                <target>Validate BlockChain Hash %link_start%here%link_end%.</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.save.to.bc.title">
+                <source>doc.detail.save.to.bc.title</source>
+                <target>Save to BlockChain</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.save.to.bc.description">
+                <source>doc.detail.save.to.bc.description</source>
+                <target>This file is not registered on BlockChain yet</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.save.to.bc.btn">
+                <source>doc.detail.save.to.bc.btn</source>
+                <target>Persist</target>
+            </trans-unit>
+            <trans-unit id="footer.my.files">
+                <source>footer.my.files</source>
+                <target>My Files</target>
+            </trans-unit>
+            <trans-unit id="footer.all.right.reserved">
+                <source>footer.all.right.reserved</source>
+                <target>All Right Reserved</target>
             </trans-unit>
         </body>
     </file>

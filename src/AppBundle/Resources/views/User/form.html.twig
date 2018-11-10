@@ -3,15 +3,15 @@
 <div class="panel-body">
     {{ form_start(form, { 'action': user.id ? path('app_user_edit', { id: user.id }) : path('app_user_new') }) }}
     <fieldset>
-        <legend class="m-b-15">Legend</legend>
+        <legend class="m-b-15">{{ 'user.form.title'|trans }}</legend>
 
         {{ form_row(form.firstName) }}
         {{ form_row(form.lastName) }}
         {{ form_row(form.email) }}
         {{ form_row(form.username) }}
 
-        <button type="submit" class="btn btn-sm btn-primary m-r-5">{{ user.id ? 'user.save'|trans : 'user.create'|trans }}</button>
-        <a href="{{ is_granted('ROLE_ADMIN') ? path('app_user_index') : path('app_account_index')}}" class="btn btn-sm btn-default">{{ 'user.cancel'|trans }}</a>
+        <button type="submit" class="btn btn-sm btn-primary m-r-5">{{ 'user.form.save'|trans|trans }}</button>
+        <a href="{{ is_granted('ROLE_ADMIN') ? path('app_user_index') : path('app_account_index')}}" class="btn btn-sm btn-default">{{ 'user.form.cancel'|trans }}</a>
 
     </fieldset>
     {{ form_end(form) }}

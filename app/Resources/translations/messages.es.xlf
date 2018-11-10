@@ -34,6 +34,73 @@
                 <source>header.login</source>
                 <target>INGRESAR</target>
             </trans-unit>
+            <trans-unit id="idx.title">
+                <source>idx.title</source>
+                <target>INICIO</target>
+            </trans-unit>
+            <trans-unit id="login.title">
+                <source>login.title</source>
+                <target>Ingresar</target>
+            </trans-unit>
+            <trans-unit id="login.header.title">
+                <source>login.header.title</source>
+                <target>Inicia sesión en Mis Docs!</target>
+            </trans-unit>
+            <trans-unit id="login.header.subtitle">
+                <source>login.header.subtitle</source>
+                <target>Comienza a manejar tus documentos!</target>
+            </trans-unit>
+            <trans-unit id="login.post.title">
+                <source>login.post.title</source>
+                <target>No eres miembro aún?</target>
+            </trans-unit>
+            <trans-unit id="login.post.description">
+                <source>login.post.description</source>
+                <target>Haz click %link_start%aquí%link_end% para registrarte.</target>
+            </trans-unit>
+            <trans-unit id="login.form.title">
+                <source>login.form.title</source>
+                <target>Ingresar</target>
+            </trans-unit>
+            <trans-unit id="login.form.username">
+                <source>login.form.username</source>
+                <target>Email o Usuario</target>
+            </trans-unit>
+            <trans-unit id="login.form.password">
+                <source>login.form.password</source>
+                <target>Contraseña</target>
+            </trans-unit>
+            <trans-unit id="login.btn">
+                <source>login.btn</source>
+                <target>INGRESAR</target>
+            </trans-unit>
+            <trans-unit id="login.not.member">
+                <source>login.not.member</source>
+                <target>No tienes una cuenta? Haz click %link_start%aquí%link_end% para registrarte.</target>
+            </trans-unit>
+            <trans-unit id="idx.header.title">
+                <source>idx.header.title</source>
+                <target>Bienvenido a Mis Docs!</target>
+            </trans-unit>
+            <trans-unit id="idx.header.subtitle">
+                <source>idx.header.subtitle</source>
+                <target>Comienza registrándote Gratis!</target>
+            </trans-unit>
+            <trans-unit id="idx.post.title">
+                <source>idx.post.title</source>
+                <target>Cómo Funciona Mis Docs?</target>
+            </trans-unit>
+            <trans-unit id="idx.post.description">
+                <source>idx.post.description</source>
+                <target>Mis Docs es una aplicación que permite garantizar la autoría de tus documentos. Es tan fácil como subirlos y listo!
+                La tecnología de Block Chain se encarga del resto.
+                En este corto video podrás comprender qué es la tecnología y cómo nos permite resguardar la integridad de tus documentos.
+                </target>
+            </trans-unit>
+            <trans-unit id="btn.register">
+                <source>btn.register</source>
+                <target>Crear cuenta</target>
+            </trans-unit>
             <trans-unit id="ac.title">
                 <source>ac.title</source>
                 <target>Mi cuenta</target>
@@ -76,7 +143,7 @@
             </trans-unit>
             <trans-unit id="mf.header.title">
                 <source>mf.header.title</source>
-                <target>ADMINISTRAR DOCUMENTOS</target>
+                <target>Administrar documentos</target>
             </trans-unit>
             <trans-unit id="mf.header.subtitle">
                 <source>mf.header.subtitle</source>
@@ -93,6 +160,138 @@
             <trans-unit id="btn.new">
                 <source>btn.new</source>
                 <target>Nuevo Documento</target>
+            </trans-unit>
+            <trans-unit id="user.edit.title">
+                <source>user.edit.title</source>
+                <target>Mi Perfil</target>
+            </trans-unit>
+            <trans-unit id="user.edit.header.title">
+                <source>user.edit.header.title</source>
+                <target>Mi Perfil</target>
+            </trans-unit>
+            <trans-unit id="user.edit.header.subtitle">
+                <source>user.edit.header.subtitle</source>
+                <target>Aquí puedes administrar tu información</target>
+            </trans-unit>
+            <trans-unit id="user.form.title">
+                <source>user.form.title</source>
+                <target>Información actual</target>
+            </trans-unit>
+            <trans-unit id="user.form.first.name">
+                <source>user.form.first.name</source>
+                <target>Nombre</target>
+            </trans-unit>
+            <trans-unit id="user.form.last.name">
+                <source>user.form.last.name</source>
+                <target>Apellido</target>
+            </trans-unit>
+            <trans-unit id="user.form.email">
+                <source>user.form.email</source>
+                <target>Email</target>
+            </trans-unit>
+            <trans-unit id="user.form.username">
+                <source>user.form.username</source>
+                <target>Usuario</target>
+            </trans-unit>
+            <trans-unit id="user.form.password">
+                <source>user.form.password</source>
+                <target>Contraseña</target>
+            </trans-unit>
+            <trans-unit id="user.form.confirm.password">
+                <source>user.form.confirm.password</source>
+                <target>Repetir Contraseña</target>
+            </trans-unit>
+            <trans-unit id="user.form.save">
+                <source>user.form.save</source>
+                <target>GUARDAR</target>
+            </trans-unit>
+            <trans-unit id="user.form.cancel">
+                <source>user.form.cancel</source>
+                <target>CANCELAR</target>
+            </trans-unit>
+            <trans-unit id="register.title">
+                <source>register.title</source>
+                <target>Registrarse</target>
+            </trans-unit>
+            <trans-unit id="register.header.title">
+                <source>register.header.title</source>
+                <target>Registrarse en Mis Docs</target>
+            </trans-unit>
+            <trans-unit id="register.header.subtitle">
+                <source>register.header.subtitle</source>
+                <target>Comienza a obtener los beneficios de BlockChain</target>
+            </trans-unit>
+            <trans-unit id="register.form.title">
+                <source>register.form.title</source>
+                <target>Completa el formulario</target>
+            </trans-unit>
+            <trans-unit id="register.sign.up">
+                <source>register.sign.up</source>
+                <target>REGISTRAR</target>
+            </trans-unit>
+            <trans-unit id="register.is.member">
+                <source>register.is.member</source>
+                <target>Ya tienes una cuenta? Haz click %link_start%aquí%link_end% para ingresar.</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.title">
+                <source>doc.detail.title</source>
+                <target>Información</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.header.title">
+                <source>doc.detail.header.title</source>
+                <target>Detalles del Documento</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.header.subtitle">
+                <source>doc.detail.header.subtitle</source>
+                <target>Ver la información del documento</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.download">
+                <source>doc.detail.download</source>
+                <target>Descargar</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.header.created.at">
+                <source>doc.detail.header.created.at</source>
+                <target>Creado el</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.in.bc.date.title">
+                <source>doc.detail.in.bc.date.title</source>
+                <target>El documento se persistió en BlockChain el</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.in.bc.your.md5.hash">
+                <source>doc.detail.in.bc.your.md5.hash</source>
+                <target>El hash MD5 del documento es</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.in.bc.md5.check.on">
+                <source>doc.detail.in.bc.md5.check.on</source>
+                <target>Puedes validar el Hash MD5 haciendo click %link_start%aquí%link_end%.</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.in.bc.your.bc.id">
+                <source>doc.detail.in.bc.your.bc.id</source>
+                <target>ID en BlockChain</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.in.bc.hash.check.on">
+                <source>doc.detail.in.bc.md5.hash.on</source>
+                <target>Puedes validar el Hash de BlockChain haciendo click %link_start%aquí%link_end%.</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.save.to.bc.title">
+                <source>doc.detail.save.to.bc.title</source>
+                <target>Guardar en BlockChain</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.save.to.bc.description">
+                <source>doc.detail.save.to.bc.description</source>
+                <target>Este documento aún no se encuentra en la BlockChain</target>
+            </trans-unit>
+            <trans-unit id="doc.detail.save.to.bc.btn">
+                <source>doc.detail.save.to.bc.btn</source>
+                <target>Persistir</target>
+            </trans-unit>
+            <trans-unit id="footer.my.files">
+                <source>footer.my.files</source>
+                <target>Mis Docs</target>
+            </trans-unit>
+            <trans-unit id="footer.all.right.reserved">
+                <source>footer.all.right.reserved</source>
+                <target>Todos los derechos reservados.</target>
             </trans-unit>
         </body>
     </file>

@@ -45,17 +45,17 @@
                         <div class="comment-author">
                             {{ 'doc.detail.in.bc.date.title'|trans }}
                             <span class="comment-date">
-                                {{ 'doc.detail.in.bc.date.on'|trans }} {{ file.updatedDate|date('Y-m-d') }}
+                                {{ file.updatedDate|date('Y-m-d') }}
                             </span>
                         </div>
                         <div class="comment-content">
                             {{ 'doc.detail.in.bc.your.md5.hash'|trans }}: {{ file.fileHash }}
                             <br>
-                            <a href="http://onlinemd5.com/"  target="_blank">{{ 'doc.detail.in.bc.md5.check.on'|trans }}</a>
+                            {{ 'doc.detail.in.bc.md5.check.on'|trans({'%link_start%' : '<a href="http://onlinemd5.com/"  target="_blank">', '%link_end%' : '</a>'})|raw }}
                             <br>
                             {{ 'doc.detail.in.bc.your.bc.id'|trans }}: {{ file.bcHash }}
                             <br>
-                            <a href="https://ropsten.etherscan.io"  target="_blank">{{ 'doc.detail.in.bc.hash.check.on'|trans }}</a>
+                            {{ 'doc.detail.in.bc.hash.check.on'|trans({'%link_start%' : '<a href="https://ropsten.etherscan.io"  target="_blank">', '%link_end%' : '</a>'})|raw }}
                         </div>
                     </div>
                     <!-- end comment-container -->

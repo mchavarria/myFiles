@@ -1,5 +1,5 @@
     <!-- begin login-header -->
-    <h4 class="section-title"><span>Login</span></h4>
+    <h4 class="section-title"><span>{{ 'login.form.title'|trans }}</span></h4>
     <!-- end login-header -->
     <!-- begin login-content -->
     <div class="login-content">
@@ -12,22 +12,22 @@
                 <div style="color: red;">{{ error.messageKey|trans(error.messageData, 'security') }}</div><br>
             {% endif %}
             <div class="form-group m-b-15">
-                <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" autocomplete="username" class="form-control form-control-lg" placeholder="{{ 'email.username'|trans }}" />
+                <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" autocomplete="username" class="form-control form-control-lg" placeholder="{{ 'login.form.username'|trans }}" />
             </div>
             <div class="form-group m-b-15">
-                <input type="password" id="password" name="_password" required="required" autocomplete="current-password" class="form-control form-control-lg" placeholder="{{ 'password'|trans }}" />
+                <input type="password" id="password" name="_password" required="required" autocomplete="current-password" class="form-control form-control-lg" placeholder="{{ 'login.form.password'|trans }}" />
             </div>
             <div class="form-group m-b-15">
-                <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-                <label for="remember_me">
-                    {{ 'remember.me'|trans }}
-                </label>
+                {#<input type="checkbox" id="remember_me" name="_remember_me" value="on" />#}
+                {#<label for="remember_me">#}
+                    {#{{ 'remember.me'|trans }}#}
+                {#</label>#}
             </div>
             <div class="login-buttons">
-                <button type="submit" id="_submit" name="_submit" class="btn btn-success btn-block btn-lg">{{ 'sign.in'|trans }}</button>
+                <button type="submit" id="_submit" name="_submit" class="btn btn-success btn-block btn-lg">{{ 'login.btn'|trans }}</button>
             </div>
             <div class="m-t-20 m-b-40 p-b-40 text-inverse">
-                Not a member yet? Click <a href="{{ path('fos_user_registration_register') }}" class="text-success">here</a> to register.
+                {{ 'login.not.member'|trans({'%link_start%' : '<a href="'~path('fos_user_registration_register')~'" class="text-success">', '%link_end%' : '</a>'})|raw }}
             </div>
         </form>
     </div>
