@@ -18,7 +18,7 @@ use Unirest;
  */
 class FileController extends Controller
 {
-    const EXAMPLE_URL = 'http://proyezbc.herokuapp.com/rest-api/v1/consume/1?hash=%s';
+    const EXAMPLE_URL = 'http://local.ezbkch.com/app_dev.php/rest-api/v1/consume/1?hash=%s';
 
     /**
      * @Template("@App/File/index.html.twig")
@@ -74,8 +74,9 @@ class FileController extends Controller
             $resp = Unirest\Request::get($url);
             $info = json_decode(json_encode($resp->body), true);
 
-            $hasError = !(is_array($info));
-            if (!$hasError) {
+            $code = (int) $resp->code;
+
+            if ($code == 200) {
                 $txid = $info['txid'];
                 $file->setBcHash($txid);
             }
@@ -152,17 +153,17 @@ class FileController extends Controller
 
             $resp = Unirest\Request::get($url);
             $info = json_decode(json_encode($resp->body), true);
+            $code = (int) $resp->code;
 
-            $hasError = !(is_array($info));
-            if (!$hasError) {
-                $txid = $info['txId'];
+            if ($code == 200) {
+                $txid = $info['txid'];
                 $file->setBcHash($txid);
             }
-        }
 
-        $entityManager = $this->getDoctrine()->getManager();
-        $entityManager->persist($file);
-        $entityManager->flush();
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($file);
+            $entityManager->flush();
+        }
 
         $url = $this->generateUrl('app_file_manager_detail', [ 'id' => $id ]);
 
