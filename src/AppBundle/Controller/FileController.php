@@ -63,7 +63,7 @@ class FileController extends Controller
             $file->setFileHash($hashValue);
 
             //TODO dispatch event to save on BlockChain.
-            $url = self::EXAMPLE_URL;
+            $url = $this->container->getParameter('ezbc_api');
             $url = sprintf(
                 $url,
                 $file->getFileHash()
@@ -145,7 +145,7 @@ class FileController extends Controller
 
         if (!$file->getBcHash()) {
             //TODO dispatch event to save on BlockChain.
-            $url = $this->container->getParameter('ezbc_api');;
+            $url = $this->container->getParameter('ezbc_api');
             $url = sprintf(
                 $url,
                 $file->getFileHash()
