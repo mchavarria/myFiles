@@ -1,6 +1,9 @@
 imports:
     - { resource: config.yml }
 
+parameters:
+    ezbc_api: "%env(EZBC_API_URL)%"
+    bc_explorer: "%env(BC_EXPLORER_URL)%"
 #doctrine:
 #    orm:
 #        metadata_cache_driver: apc

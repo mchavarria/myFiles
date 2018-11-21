@@ -55,7 +55,12 @@
                             <br>
                             {{ 'doc.detail.in.bc.your.bc.id'|trans }}: {{ file.bcHash }}
                             <br>
-                            {{ 'doc.detail.in.bc.hash.check.on'|trans({'%link_start%' : '<a href="https://ropsten.etherscan.io"  target="_blank">', '%link_end%' : '</a>'})|raw }}
+                            {{ 'doc.detail.in.bc.hash.check.on'|trans({
+                                '%link_start%' : '<a href="',
+                                '%link_url%' : bcExplorer,
+                                '%link_target%': '"  target="_blank">',
+                                '%link_end%' : '</a>'
+                            })|raw }}
                         </div>
                     </div>
                     <!-- end comment-container -->

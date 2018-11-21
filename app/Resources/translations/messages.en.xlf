@@ -267,11 +267,11 @@
             </trans-unit>
             <trans-unit id="doc.detail.in.bc.your.bc.id">
                 <source>doc.detail.in.bc.your.bc.id</source>
-                <target>BlockChain ID</target>
+                <target>BlockChain Transaction ID</target>
             </trans-unit>
             <trans-unit id="doc.detail.in.bc.hash.check.on">
                 <source>doc.detail.in.bc.hash.check.on</source>
-                <target>Validate BlockChain Transaction Hash %link_start%here%link_end%.</target>
+                <target>Validate BlockChain Transaction Hash %link_start%%link_url%%link_target%here%link_end%.</target>
             </trans-unit>
             <trans-unit id="doc.detail.save.to.bc.title">
                 <source>doc.detail.save.to.bc.title</source>

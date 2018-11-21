@@ -18,8 +18,6 @@ use Unirest;
  */
 class FileController extends Controller
 {
-    const EXAMPLE_URL = 'http://proyezbc.herokuapp.com/rest-api/v1/consume/1?hash=%s';
-
     /**
      * @Template("@App/File/index.html.twig")
      *
@@ -122,9 +120,11 @@ class FileController extends Controller
     {
         $repository = $this->getDoctrine()->getRepository(File::class);
         $file = $repository->find($id);
+        $bcExplorer = $this->container->getParameter('bc_explorer');
 
         $parameters = [
-            'file' => $file
+            'file' => $file,
+            'bcExplorer' => $bcExplorer
         ];
 
         return $parameters;
@@ -145,7 +145,7 @@ class FileController extends Controller
 
         if (!$file->getBcHash()) {
             //TODO dispatch event to save on BlockChain.
-            $url = self::EXAMPLE_URL;
+            $url = $this->container->getParameter('ezbc_api');;
             $url = sprintf(
                 $url,
                 $file->getFileHash()
