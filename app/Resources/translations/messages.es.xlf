@@ -4,11 +4,11 @@
         <body>
             <trans-unit id="brand.my.files.title">
                 <source>brand.my.files.title</source>
-                <target>Mis Docs</target>
+                <target>Mis Manuscritos</target>
             </trans-unit>
             <trans-unit id="brand.my.files">
                 <source>brand.my.files</source>
-                <target>MIS DOCS</target>
+                <target>Mis Manuscritos</target>
             </trans-unit>
             <trans-unit id="header.home">
                 <source>header.home</source>
@@ -20,7 +20,7 @@
             </trans-unit>
             <trans-unit id="header.my.files">
                 <source>header.my.files</source>
-                <target>MIS DOCS</target>
+                <target>MIS MANUSCRITOS</target>
             </trans-unit>
             <trans-unit id="header.my.profile">
                 <source>header.my.profile</source>
@@ -44,7 +44,7 @@
             </trans-unit>
             <trans-unit id="login.header.title">
                 <source>login.header.title</source>
-                <target>Inicia sesión en Mis Docs!</target>
+                <target>Inicia sesión en Mis Manuscritos!</target>
             </trans-unit>
             <trans-unit id="login.header.subtitle">
                 <source>login.header.subtitle</source>
@@ -80,7 +80,7 @@
             </trans-unit>
             <trans-unit id="idx.header.title">
                 <source>idx.header.title</source>
-                <target>Bienvenido a Mis Docs!</target>
+                <target>Bienvenido a Mis Manuscritos!</target>
             </trans-unit>
             <trans-unit id="idx.header.subtitle">
                 <source>idx.header.subtitle</source>
@@ -88,11 +88,11 @@
             </trans-unit>
             <trans-unit id="idx.post.title">
                 <source>idx.post.title</source>
-                <target>Cómo Funciona Mis Docs?</target>
+                <target>Cómo Funciona Mis Manuscritos?</target>
             </trans-unit>
             <trans-unit id="idx.post.description">
                 <source>idx.post.description</source>
-                <target>Mis Docs es una aplicación que permite garantizar la autoría de tus documentos. Es tan fácil como subirlos y listo!
+                <target>Mis Manuscritos es una aplicación que permite garantizar la autoría de tus documentos. Es tan fácil como subirlos y listo!
                 La tecnología de Block Chain se encarga del resto.
                 En este corto video podrás comprender qué es la tecnología y cómo nos permite resguardar la integridad de tus documentos.
                 </target>
@@ -111,11 +111,11 @@
             </trans-unit>
             <trans-unit id="ac.header.keep.saving">
                 <source>ac.header.keep.saving</source>
-                <target>asegura tus documentos</target>
+                <target>asegura tus Manuscritos</target>
             </trans-unit>
             <trans-unit id="doc.form.title">
                 <source>doc.form.title</source>
-                <target>Nuevo Documento</target>
+                <target>Nuevo Manuscrito</target>
             </trans-unit>
             <trans-unit id="form.save">
                 <source>form.save</source>
@@ -127,15 +127,15 @@
             </trans-unit>
             <trans-unit id="doc.new.title">
                 <source>doc.new.title</source>
-                <target>Nuevo Documento</target>
+                <target>Nuevo Manuscritos</target>
             </trans-unit>
             <trans-unit id="doc.header.new.subtitle">
                 <source>doc.header.new.subtitle</source>
-                <target>Completa el formulario y guarda tu Documento</target>
+                <target>Completa el formulario y guarda tu Manuscritos</target>
             </trans-unit>
             <trans-unit id="doc.header.new.title">
                 <source>doc.header.new.title</source>
-                <target>Nuevo Documento</target>
+                <target>Nuevo Manuscritos</target>
             </trans-unit>
             <trans-unit id="mf.title">
                 <source>mf.title</source>
@@ -143,11 +143,11 @@
             </trans-unit>
             <trans-unit id="mf.header.title">
                 <source>mf.header.title</source>
-                <target>Administrar documentos</target>
+                <target>Administrar Manuscritos</target>
             </trans-unit>
             <trans-unit id="mf.header.subtitle">
                 <source>mf.header.subtitle</source>
-                <target>Aquí puedes administrar tus documentos</target>
+                <target>Aquí puedes administrar tus Manuscritos</target>
             </trans-unit>
             <trans-unit id="mf.item.no.description">
                 <source>mf.item.no.description</source>
@@ -159,7 +159,7 @@
             </trans-unit>
             <trans-unit id="btn.new">
                 <source>btn.new</source>
-                <target>Nuevo Documento</target>
+                <target>Nuevo Manuscrito</target>
             </trans-unit>
             <trans-unit id="user.edit.title">
                 <source>user.edit.title</source>
@@ -215,7 +215,7 @@
             </trans-unit>
             <trans-unit id="register.header.title">
                 <source>register.header.title</source>
-                <target>Registrarse en Mis Docs</target>
+                <target>Registrarse en Mis Manuscritos</target>
             </trans-unit>
             <trans-unit id="register.header.subtitle">
                 <source>register.header.subtitle</source>
@@ -239,11 +239,11 @@
             </trans-unit>
             <trans-unit id="doc.detail.header.title">
                 <source>doc.detail.header.title</source>
-                <target>Detalles del Documento</target>
+                <target>Detalles del Manuscrito</target>
             </trans-unit>
             <trans-unit id="doc.detail.header.subtitle">
                 <source>doc.detail.header.subtitle</source>
-                <target>Ver la información del documento</target>
+                <target>Ver la información del Manuscrito</target>
             </trans-unit>
             <trans-unit id="doc.detail.download">
                 <source>doc.detail.download</source>
@@ -255,11 +255,11 @@
             </trans-unit>
             <trans-unit id="doc.detail.in.bc.date.title">
                 <source>doc.detail.in.bc.date.title</source>
-                <target>El documento se persistió en BlockChain el</target>
+                <target>El Manuscrito se persistió en BlockChain el</target>
             </trans-unit>
             <trans-unit id="doc.detail.in.bc.your.md5.hash">
                 <source>doc.detail.in.bc.your.md5.hash</source>
-                <target>El hash MD5 del documento es</target>
+                <target>El hash MD5 del Manuscrito es</target>
             </trans-unit>
             <trans-unit id="doc.detail.in.bc.md5.check.on">
                 <source>doc.detail.in.bc.md5.check.on</source>
@@ -279,7 +279,7 @@
             </trans-unit>
             <trans-unit id="doc.detail.save.to.bc.description">
                 <source>doc.detail.save.to.bc.description</source>
-                <target>Este documento aún no se encuentra en la BlockChain</target>
+                <target>Este Manuscrito aún no se encuentra en la BlockChain</target>
             </trans-unit>
             <trans-unit id="doc.detail.save.to.bc.btn">
                 <source>doc.detail.save.to.bc.btn</source>
@@ -287,7 +287,7 @@
             </trans-unit>
             <trans-unit id="footer.my.files">
                 <source>footer.my.files</source>
-                <target>Mis Docs</target>
+                <target>Mis Manuscritos</target>
             </trans-unit>
             <trans-unit id="footer.all.right.reserved">
                 <source>footer.all.right.reserved</source>
